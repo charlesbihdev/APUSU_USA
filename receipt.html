@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>APSU USA Receipt</title>
+    <!-- <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3"
+      crossorigin="anonymous"
+    /> -->
+    <link
+      href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+      rel="stylesheet"
+    />
+
+    <!-- <link rel="stylesheet" href="./css/receipt.css" /> -->
+    <style>
+      
+      .logo-section {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: nowrap;
+      }
+      
+
+      #detail {
+        width: 100%;
+        border-collapse: collapse;
+      }
+
+      #detail th,
+      #detail td {
+        border: 1px solid #ddd;
+        padding: 4px;
+        text-align: center;
+      }
+      #img-table{
+        width: 100%;
+      }
+
+      #img-table td, th {
+        padding: 0;
+
+      }
+      td img {
+    display: block; /* Make the image a block-level element */
+    margin: 0; /* Remove any default margin */
+}
+
+      /* Merged cells */
+     #detail th.colspan-2 {
+        text-align: center;
+      }
+
+      #detail td.colspan-2 {
+        background-color: #f2f2f2;
+        text-align: center;
+      }
+      #styled-table {
+            width: 100%;
+            border-collapse: separate;
+            border-spacing: 0 5px;
+        }
+
+        #styled-table th {
+            background-color: #324c63;
+            color: white;
+        }
+
+        #styled-table th, #styled-table td {
+            border: 1px solid white;
+            padding: 10px;
+            text-align: center;
+        }
+
+        #styled-table tr:nth-child(odd) {
+            background-color: white;
+            padding: 40px;
+
+        }
+
+        #styled-table tr:nth-child(even) {
+            background-color: #d6e0ea;
+            padding: 10px;
+
+        }
+
+        #styled-table th:first-child,
+        td:first-child {
+            width: 35%; /* Adjust the width as needed */
+        }
+
+    </style>
+  </head>
+  <body style="border: 2px solid black";>
+    <main>
+      <section class="logo-section">
+        <table id="img-table">
+            <tr>
+            
+              <td > <img src="./images/apuusa.png" height="100px" width="80px" style="margin-left: 10px;"/>
+              </td>
+
+              <td style="text-align: right;"><img
+            src="./images/qqAPSUUSA1.png"
+            height="40px"
+            width="150px";
+            style="margin-top: 20px; margin-bottom: 25px; margin-right: 30px;"            
+          /> <br><img src="./images/ready.png" height="20px" width="150px"/> </td>
+            </tr>
+
+      
+        </table>
+      </section>
+      <div style="border: 2px solid black; border-left: none; border-right: none;">
+        <h3 style="text-align: right; margin-right: 10px; padding: 0;">Receipt</h3>
+      </div>
+      <div>
+        <table id="detail">
+          <tr>
+            <td colspan="2"><h2 style="color: #4f6576;">APSU USA Endowment Fund</h2></td>
+            <td> <b>Issue Date</b></td>
+            <td><b>{date}</b></td>
+          </tr>
+          <tr>
+            <td>Paid</th>
+            <td>Name</th>
+            <td colspan="2"><b>{name}</b></td>
+          </tr>
+          <tr>
+            <td></td>
+            <td>Street Adress</td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>City, ST ZIP Code</td>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>Phone</td>
+            <td></td>
+            <td colspan="2"><b>{phone}</b></td>
+
+          </tr>
+        </table>
+      </div>
+      <div>
+        <table id="styled-table" class="table-striped">
+            <thead>
+                <tr>
+                    <th width="25%">Fullname</th>
+                    <th>Year Group</th>
+                    <th>Mode</th>
+                    <th>Type</th>
+                    <th>Amount</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>{name}</td>
+                    <td>{year}</td>
+                    <td>{mode}</td>
+                    <td>{type}</td>
+                    <td>${amount}</td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td>Total</td>
+                    <td>${amount}</td>
+                </tr>
+                <!-- Add more rows as needed -->
+            </tbody>
+
+        </table>
+        <h4 style="color: #4f6576; text-align: center; font-style: italic;">Road to 1 Million - Action Nkotsee!</h4>
+
+      </div>
+    </main>
+  </body>
+</html>
